@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LoveBRD.Models
+namespace LoveBRD.Controllers.Resourses
 {
-    public class ApartmentTipe
+    public class KeyValuePairResourse
     {
         public int Id { get; set; }
         public string Name { get; set; }

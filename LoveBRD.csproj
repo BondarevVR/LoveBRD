@@ -13,8 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameWorkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +34,20 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Migrations\20201013201432_ApartmentTipe.cs" />
+    <Compile Remove="Migrations\20201013201432_ApartmentTipe.Designer.cs" />
+    <Compile Remove="Migrations\20201013203850_ApartmentTipe.cs" />
+    <Compile Remove="Migrations\20201013203850_ApartmentTipe.Designer.cs" />
+    <Compile Remove="Migrations\20201013214039_ApartmentStaff.cs" />
+    <Compile Remove="Migrations\20201013214039_ApartmentStaff.Designer.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Controllers\Resourses\" />
+    <Folder Include="Mapping\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
