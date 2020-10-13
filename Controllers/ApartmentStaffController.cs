@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LoveBRD.Controllers.Resourses;
+using LoveBRD.Core;
 using LoveBRD.Mapping;
 using LoveBRD.Models;
 using LoveBRD.Persistance;
@@ -14,29 +15,29 @@ namespace LoveBRD.Controllers
 {
     public class ApartmentStaffController
     {
-        private readonly AppDBContext context;
+        private readonly IApartmentStaffRepo repository;
         private readonly IMapper mapper;
 
-        public ApartmentStaffController(AppDBContext context, IMapper mapper)
+        public ApartmentStaffController(IApartmentStaffRepo repository, IMapper mapper)
         {
-            this.context = context;
+            this.repository = repository;
             this.mapper = mapper;
         }
 
-        [HttpGet("/api/types")]
+        [HttpGet("/api/apartTypes")]
         public async Task<IEnumerable<KeyValuePairResourse>> GetTipes() 
         {
-            var types = await context.Types.ToListAsync();
+            var types = await repository.GetTypes();
 
-            return mapper.Map<List<ApartmentType>, List<KeyValuePairResourse>>(types);
+            return mapper.Map<IEnumerable<ApartmentType>, IEnumerable<KeyValuePairResourse>>(types);
         }
 
-        [HttpGet("/api/features")]
+        [HttpGet("/api/apartFeatures")]
         public async Task<IEnumerable<KeyValuePairResourse>> GetFeatures()
         {
-            var features = await context.Features.ToListAsync();
+            var features = await repository.GetFeatures();
 
-            return mapper.Map<List<ApartmentFeature>, List<KeyValuePairResourse>>(features);
+            return mapper.Map<IEnumerable<ApartmentFeature>, IEnumerable<KeyValuePairResourse>>(features);
         }
     }
 }

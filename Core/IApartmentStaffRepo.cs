@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LoveBRD.Core
 {
-    interface IApartmentStaffRepo
+    public interface IApartmentStaffRepo
     {
-        Task<IEnumerable<ApartmentType>> GetTypes();
-        Task<IEnumerable<ApartmentFeature>> GetFeatures();
+        public Task<IEnumerable<ApartmentType>> GetTypes();
+        public Task<IEnumerable<ApartmentFeature>> GetFeatures();
     }
 }
