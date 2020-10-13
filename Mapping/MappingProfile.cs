@@ -13,8 +13,8 @@ namespace LoveBRD.Mapping
         public MappingProfile()
         {
             // From models to resourses
-            CreateMap<Models.Type, KeyValuePairResourse>();
-            CreateMap<Feature, KeyValuePairResourse>();
+            CreateMap<ApartmentType, KeyValuePairResourse>();
+            CreateMap<ApartmentFeature, KeyValuePairResourse>();
 
             //From resourses to models
         }

@@ -28,7 +28,7 @@ namespace LoveBRD.Controllers
         {
             var types = await context.Types.ToListAsync();
 
-            return mapper.Map<List<Models.Type>, List<KeyValuePairResourse>>(types);
+            return mapper.Map<List<ApartmentType>, List<KeyValuePairResourse>>(types);
         }
 
         [HttpGet("/api/features")]
@@ -36,7 +36,7 @@ namespace LoveBRD.Controllers
         {
             var features = await context.Features.ToListAsync();
 
-            return mapper.Map<List<Feature>, List<KeyValuePairResourse>>(features);
+            return mapper.Map<List<ApartmentFeature>, List<KeyValuePairResourse>>(features);
         }
     }
 }
