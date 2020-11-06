@@ -1,16 +1,16 @@
-﻿using System;
+﻿using LoveBRD.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LoveBRD.Models
+namespace LoveBRD.Core.Models.ApartmentModel
 {
     public class ApartmentFeature
     {
-        public int Id { get; set; }
-        [Required]
-        [StringLength(255)]
-        public string Name{ get; set; }
+        public int ApartmentId { get; set; }
+        public int FeatureId { get; set; }
+        public Apartment Apartment { get; set; }
+        public Feature Feature { get; set; }
     }
 }

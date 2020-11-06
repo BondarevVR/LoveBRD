@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoveBRD.Models
 {
-    public class ApartmentType
+    public class _Type
     {
         public int Id { get; set; }
         [Required]

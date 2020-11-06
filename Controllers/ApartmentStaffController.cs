@@ -29,7 +29,7 @@ namespace LoveBRD.Controllers
         {
             var types = await repository.GetTypes();
 
-            return mapper.Map<IEnumerable<ApartmentType>, IEnumerable<KeyValuePairResourse>>(types);
+            return mapper.Map<IEnumerable<_Type>, IEnumerable<KeyValuePairResourse>>(types);
         }
 
         [HttpGet("/api/apartFeatures")]
@@ -37,7 +37,7 @@ namespace LoveBRD.Controllers
         {
             var features = await repository.GetFeatures();
 
-            return mapper.Map<IEnumerable<ApartmentFeature>, IEnumerable<KeyValuePairResourse>>(features);
+            return mapper.Map<IEnumerable<Feature>, IEnumerable<KeyValuePairResourse>>(features);
         }
     }
 }

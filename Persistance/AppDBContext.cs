@@ -9,8 +9,8 @@ namespace LoveBRD.Persistance
 {
     public class AppDBContext: DbContext
     {
-        public DbSet<ApartmentType> Types { get; set; }
-        public DbSet<ApartmentFeature> Features { get; set; }
+        public DbSet<Models._Type> Types { get; set; }
+        public DbSet<Feature> Features { get; set; }
         public AppDBContext(DbContextOptions<AppDBContext> options)
             :base(options)
         {

@@ -8,7 +8,7 @@ namespace LoveBRD.Core
 {
     public interface IApartmentStaffRepo
     {
-        public Task<IEnumerable<ApartmentType>> GetTypes();
-        public Task<IEnumerable<ApartmentFeature>> GetFeatures();
+        public Task<IEnumerable<_Type>> GetTypes();
+        public Task<IEnumerable<Feature>> GetFeatures();
     }
 }

@@ -17,11 +17,11 @@ namespace LoveBRD.Persistance
             this.context = context;
         }
 
-        public async Task<IEnumerable<ApartmentType>> GetTypes() 
+        public async Task<IEnumerable<_Type>> GetTypes () 
         {
             return await context.Types.ToListAsync();
         }
-        public async Task<IEnumerable<ApartmentFeature>> GetFeatures()
+        public async Task<IEnumerable<Feature>> GetFeatures()
         {
             return await context.Features.ToListAsync();
         }
