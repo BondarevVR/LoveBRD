@@ -17,9 +17,10 @@ namespace LoveBRD.Core.Models
         public IEnumerable<ApartmentFeature> Features { get; set; }
         [Required]
         public int Price { get; set; }
-        
-
-
-
+        public Contacts Contacts { get; set; }
+        [Required]
+        public string Adress { get; set; }
+        public string AdditionalInformation { get; set; }
+        public DateTime LastUpdate { get; set; }
     }
 }
