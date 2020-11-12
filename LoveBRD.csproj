@@ -46,7 +46,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Controllers\Resourses\" />
     <Folder Include="Mapping\" />
   </ItemGroup>
 

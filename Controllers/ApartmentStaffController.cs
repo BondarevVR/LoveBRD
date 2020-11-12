@@ -24,7 +24,7 @@ namespace LoveBRD.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet("/api/Types")]
+        [HttpGet("/api/types")]
         public async Task<IEnumerable<KeyValuePairResourse>> GetTipes() 
         {
             var types = await repository.GetTypes();
@@ -32,7 +32,7 @@ namespace LoveBRD.Controllers
             return mapper.Map<IEnumerable<_Type>, IEnumerable<KeyValuePairResourse>>(types);
         }
 
-        [HttpGet("/api/Features")]
+        [HttpGet("/api/features")]
         public async Task<IEnumerable<KeyValuePairResourse>> GetFeatures()
         {
             var features = await repository.GetFeatures();

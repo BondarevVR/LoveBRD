@@ -8,6 +8,7 @@ namespace LoveBRD.Core.Models
 {
     public class Contacts
     {
+        public int ApartmentId { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }

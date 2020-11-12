@@ -25,6 +25,7 @@ namespace LoveBRD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IApartmentStaffRepo, ApartmentStaffRepo>();
+            services.AddScoped<IApartmentRepo, ApartmentRepo>();
 
             services.AddDbContext<AppDBContext>(options =>
                 options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=model;Trusted_Connection=True;"));
